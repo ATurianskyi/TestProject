@@ -10,7 +10,7 @@ public class ConfProperties {
 
     static {
         try {
-            fileInputStream = new FileInputStream(Util.getPathToProjectFolder() + "\\src\\test\\java\\resources\\conf.properties");
+            fileInputStream = new FileInputStream("./src/test/java/resources/conf.properties");
             PROPERTIES = new Properties();
             PROPERTIES.load(fileInputStream);
         } catch (IOException e) {

@@ -12,29 +12,29 @@ public class CartPage extends BasePage {
     }
 
     @FindBy(xpath = "//div[@class= 'ucob-form']//input[@type='text']")
-    private WebElement loginField;
+    private WebElement usernameField;
 
     @FindBy(xpath = "//div[contains(@class, 'button')]/a")
-    private WebElement loginBtn;
+    private WebElement continueBtn;
 
     @FindBy(xpath = "//input[@type='email']")
-    private WebElement passwdField;
+    private WebElement emailField;
 
     @FindBy(xpath = "//div[@class='ucob-form-input-message uc-red']/p")
     private WebElement emailErrorMessage;
 
-    public CartPage inputLogin(String login) {
-        loginField.sendKeys(login);
+    public CartPage inputUsername(String username) {
+        usernameField.sendKeys(username);
         return this;
     }
 
-    public CartPage inputPasswd(String passwd) {
-        passwdField.sendKeys(passwd);
+    public CartPage inputEmail(String email) {
+        emailField.sendKeys(email);
         return this;
     }
 
-    public CartPage clickLoginBtn() {
-        loginBtn.click();
+    public CartPage clickContinueBtn() {
+        continueBtn.click();
         waitUntilPageLoad();
         return this;
     }

@@ -10,9 +10,9 @@ public class CartPageTest extends TestBase {
         CartPageVerify cartPageVerify = new CartPageVerify(driver);
 
         cartPage.openCardPageWithOrder()
-                .inputLogin("ukraine")
-                .inputPasswd("incorrectpass.coa")
-                .clickLoginBtn();
+                .inputUsername("ukraine")
+                .inputEmail("incorrectpass.coa")
+                .clickContinueBtn();
         cartPageVerify.verifyErrorMessageIsDisplayedForEmailField();
     }
 }
