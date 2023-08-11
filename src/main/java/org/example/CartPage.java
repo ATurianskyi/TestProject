@@ -23,12 +23,14 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//div[@class='ucob-form-input-message uc-red']/p")
     private WebElement emailErrorMessage;
 
-    public CartPage inputUsername(String username) {
+    public CartPage setUsername(String username) {
+        usernameField.clear();
         usernameField.sendKeys(username);
         return this;
     }
 
-    public CartPage inputEmail(String email) {
+    public CartPage setEmail(String email) {
+        emailField.clear();
         emailField.sendKeys(email);
         return this;
     }
